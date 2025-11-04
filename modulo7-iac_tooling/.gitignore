@@ -1,5 +1,50 @@
-.terraform*
-dist
-terraform
-package-lock*
-node_modules
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfplan
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# SSH Keys
+.ssh/
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Node
+node_modules/
+dist/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AWS
+.aws/
+credentials
+
+# Build
+build/
+out/

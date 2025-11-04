@@ -1,0 +1,23 @@
+# Exemplo de arquivo terraform.tfvars
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# AWS Region
+aws_region = "us-east-1"
+
+# Project Tags
+project_name = "jewelry-app"
+environment  = "production"
+
+# EC2 Configuration
+instance_type = "t2.micro"  # Free Tier
+
+# VPC Configuration
+vpc_cidr    = "10.0.0.0/16"
+subnet_cidr = "10.0.1.0/24"
+
+# Security - RESTRINJA O ACESSO SSH!
+# allowed_ssh_cidrs = ["SEU_IP/32"]  # Descomente e adicione seu IP
+allowed_ssh_cidrs = ["0.0.0.0/0"]    # ATENÇÃO: Permitir tudo (apenas dev/teste)
+
+# Application Configuration
+app_port = 8080
