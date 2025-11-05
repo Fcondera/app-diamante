@@ -242,11 +242,11 @@ resource "aws_instance" "main" {
     docker container stop jewelry-app 2> /dev/null || true
     docker container rm jewelry-app 2> /dev/null || true
     
-    # Clonar repositório
+    # Clonar repositório atualizado
     cd /home/ubuntu
-    rm -rf proway-docker/
-    git clone https://github.com/dartanghan/proway-docker.git
-    cd proway-docker/modulo7-iac_tooling
+    rm -rf app-diamante/
+    git clone https://github.com/Fcondera/app-diamante.git
+    cd app-diamante/modulo7-iac_tooling
     
     # Build e execução do container
     docker build -t jewelry-app .
