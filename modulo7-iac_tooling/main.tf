@@ -5,14 +5,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-  
-  backend "s3" {
-    bucket         = "jewelry-app-terraform-state"
-    key            = "jewelry-app/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "jewelry-app-terraform-locks"
-    encrypt        = true
-  }
 }
 
 provider "aws" {
